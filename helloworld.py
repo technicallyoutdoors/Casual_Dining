@@ -1,4 +1,5 @@
-print("hello world")
-print("eat more whisky")
+x = input("what is your favorite drink?")
+
+print("my favorite drink is, " + x)
 
 
