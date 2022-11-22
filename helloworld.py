@@ -12,3 +12,5 @@ else:
 
 # yay!!!!!!!!!!!!!
 print("yellow") 
+
+schedule.ontime.test()
