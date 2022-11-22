@@ -3,3 +3,5 @@ def dining_types():
 
 
 dining_types()
+
+#added comments
