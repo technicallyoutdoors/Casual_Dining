@@ -5,3 +5,7 @@ def dining_types():
 dining_types()
 
 #added comments
+def hello_world():
+    var1 = str('hello, how are you')
+    print(hello_world())
+
