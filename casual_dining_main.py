@@ -1,10 +1,10 @@
 def dining_types():
     print("this is going to find all dining types that are casual")
 
-def find_restauraunt():
-    type = input("What kind of resturaunt do you want to find? " )
-    output = str("Here is a list of the ", type, "restaruants within a 10 mile radius of your area ")
-find_restauraunt()
+def find_restaurant():
+    type = input("What kind of restaurant do you want to find? " )
+    output = str("Here is a list of the ", type, "restaurants within a 10 mile radius of your area ")
+find_restaurant()
 
 
 dining_types()
