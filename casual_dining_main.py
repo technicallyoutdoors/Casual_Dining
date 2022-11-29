@@ -15,11 +15,11 @@ def webscrape_dinning_types():
     import requests
     url = "http://ajax.googleapis.com/ajax/services/search?rlz=1C1CHBF_enUS916US916&sxsrf=ALiCzsblr3vdeNM7Crb2YxKcokERB8vrIQ:1669440028825&q=North+Italia&ludocid=1882766253883301680&gsas=1&lsig=AB86z5UbFiwXMXCE3pI1C6IeWY-5&sa=X&ved=2ahUKEwj5_pDfjMv7AhXvm2oFHXTcCq8QhecIegQIahAN&biw=2560&bih=1307&dpr=1"
     result = requests.get(url).text 
-    doc = BeautifulSoup(result, "html.parser") 
-    rest_type = doc.find(class_="YhemCb")
+    doc = BeautifulSoup(result, "html.parser")
+    rest_type = doc.find(class_="zloOqf kpS1Ac vk_gy")
     print(rest_type)
-    #span = doc.span
-    #print(span)    
+    div = doc.div
+    print(span)    
 webscrape_dinning_types()  
 
 
