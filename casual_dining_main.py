@@ -1,6 +1,6 @@
-from bs4 import BeautifulSoup
-import requests
-import re
+#from bs4 import BeautifulSoup
+#import requests
+#import re
 
 #function to explain the program
 #def dining_types():
@@ -12,14 +12,19 @@ import re
 def webscrape_dinning_types():
     from bs4 import BeautifulSoup 
     import requests
+    from lxml import html
     url = "https://www.newegg.com/p/pl?d=macbook"
+    tree = html.fromstring(page.content) 
     result = requests.get(url).text 
-    doc = BeautifulSoup(result, "html.parser")
-    macbook_type = doc.find(href="item-title")
+    macbook_type = tree.xpath('//a[@title="View Details"]/text()')
+
+
     print(macbook_type)
-    href = doc.href
-    print(href)    
-webscrape_dinning_types() 
+
+
+
+ 
+
 
 
 #function to find the dining type from user input
