@@ -20,7 +20,7 @@ def webscrape_dinning_types():
     print(rest_type)
     div = doc.div
     print(span)    
-webscrape_dinning_types()  
+webscrape_dinning_types() 
 
 
 #function to find the dining type from user input
