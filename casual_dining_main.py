@@ -7,15 +7,19 @@ from lxml import html
 import re
 import csv 
 
+import requests
 
 url = "https://www.newegg.com/p/pl?d=macbook"
-soup = BeautifulSoup(url, 'html.parser')
-content = soup.find('div', {"class": "item-cells-wrap border-cells items-grid-view four-cells expulsion-one-cell"})
+soup = BeautifulSoup(url, 'html5lib')
+r = requests.get(url)
 
-page = ''
-for i in content.find('Macbook'):
-    #page = page + '' + i.text
-    with open('scraped_text.txt', 'w') as file:
-        file.write(page)
+#macbooks=[] #a list to store macbooks 
+
+content = soup.findAll('div', {"class": "item-cells-wrap border-cells items-grid-view four-cells expulsion-one-cell"})
+pattern = 'Macbook'
+title = soup.find_all('a', text = pattern)
+print(title)
+
+
 
 
